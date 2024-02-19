@@ -1,0 +1,116 @@
+group 'com.example.select_media'
+version '1.0'
+
+buildscript {
+    repositories {
+//        google()
+//        mavenCentral()
+        maven {
+            allowInsecureProtocol true
+            url 'https://maven.aliyun.com/repository/google'
+        }
+        maven {
+            allowInsecureProtocol true
+            url 'https://maven.aliyun.com/repository/jcenter'
+        }
+        maven {
+            allowInsecureProtocol true
+            url 'http://maven.aliyun.com/nexus/content/groups/public'
+        }
+        maven {
+            allowInsecureProtocol true
+            url "http://download.flutter.io"
+        }
+        maven {
+            allowInsecureProtocol true
+            url "http://nexus-ce.emas-poc.com/repository/maven-public/"
+            credentials {
+                username = "CenterExperience"
+                password = "77kkyy99"
+            }
+        }
+        maven { url 'https://developer.huawei.com/repo/' }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.0'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+//        google()
+//        mavenCentral()
+        maven {
+            allowInsecureProtocol true
+            url 'https://maven.aliyun.com/repository/google'
+        }
+        maven {
+            allowInsecureProtocol true
+            url 'https://maven.aliyun.com/repository/jcenter'
+        }
+        maven {
+            allowInsecureProtocol true
+            url 'http://maven.aliyun.com/nexus/content/groups/public'
+        }
+        maven {
+            allowInsecureProtocol true
+            url "http://download.flutter.io"
+        }
+        maven {
+            allowInsecureProtocol true
+            url "http://nexus-ce.emas-poc.com/repository/maven-public/"
+            credentials {
+                username = "CenterExperience"
+                password = "77kkyy99"
+            }
+        }
+        maven { url 'https://developer.huawei.com/repo/' }
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    if (project.android.hasProperty("namespace")) {
+        namespace 'com.example.select_media'
+    }
+
+    compileSdkVersion 33
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        minSdkVersion 19
+    }
+
+    dependencies {
+        testImplementation 'junit:junit:4.13.2'
+        testImplementation 'org.mockito:mockito-core:5.0.0'
+
+        /// 图片加载插件
+        implementation "com.github.bumptech.glide:glide:3.7.0"
+
+        // 照片和视频选择和拍摄
+        implementation 'io.github.lucksiege:pictureselector:v3.11.1'
+        // 图片压缩 (按需引入)
+        implementation 'io.github.lucksiege:compress:v3.11.1'
+        // 图片裁剪 (按需引入)
+        implementation 'io.github.lucksiege:ucrop:v3.11.1'
+        // 自定义相机 (按需引入)
+        implementation 'io.github.lucksiege:camerax:v3.11.1'
+    }
+
+    testOptions {
+        unitTests.all {
+            testLogging {
+               events "passed", "skipped", "failed", "standardOut", "standardError"
+               outputs.upToDateWhen {false}
+               showStandardStreams = true
+            }
+        }
+    }
+}

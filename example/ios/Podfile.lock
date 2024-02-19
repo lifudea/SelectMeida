@@ -1,0 +1,76 @@
+PODS:
+  - Flutter (1.0.0)
+  - flutter_custom_dialog (0.0.1):
+    - Flutter
+  - integration_test (0.0.1):
+    - Flutter
+  - lecle_flutter_absolute_path (0.0.1):
+    - Flutter
+  - package_info_plus (0.4.5):
+    - Flutter
+  - permission_handler_apple (9.1.1):
+    - Flutter
+  - select_media (0.0.1):
+    - Flutter
+  - TZImagePickerController (3.8.3):
+    - TZImagePickerController/Basic (= 3.8.3)
+    - TZImagePickerController/Location (= 3.8.3)
+  - TZImagePickerController/Basic (3.8.3)
+  - TZImagePickerController/Location (3.8.3)
+  - video_player_avfoundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - wakelock_plus (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - flutter_custom_dialog (from `.symlinks/plugins/flutter_custom_dialog/ios`)
+  - integration_test (from `.symlinks/plugins/integration_test/ios`)
+  - lecle_flutter_absolute_path (from `.symlinks/plugins/lecle_flutter_absolute_path/ios`)
+  - package_info_plus (from `.symlinks/plugins/package_info_plus/ios`)
+  - permission_handler_apple (from `.symlinks/plugins/permission_handler_apple/ios`)
+  - select_media (from `.symlinks/plugins/select_media/ios`)
+  - TZImagePickerController
+  - video_player_avfoundation (from `.symlinks/plugins/video_player_avfoundation/darwin`)
+  - wakelock_plus (from `.symlinks/plugins/wakelock_plus/ios`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - TZImagePickerController
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  flutter_custom_dialog:
+    :path: ".symlinks/plugins/flutter_custom_dialog/ios"
+  integration_test:
+    :path: ".symlinks/plugins/integration_test/ios"
+  lecle_flutter_absolute_path:
+    :path: ".symlinks/plugins/lecle_flutter_absolute_path/ios"
+  package_info_plus:
+    :path: ".symlinks/plugins/package_info_plus/ios"
+  permission_handler_apple:
+    :path: ".symlinks/plugins/permission_handler_apple/ios"
+  select_media:
+    :path: ".symlinks/plugins/select_media/ios"
+  video_player_avfoundation:
+    :path: ".symlinks/plugins/video_player_avfoundation/darwin"
+  wakelock_plus:
+    :path: ".symlinks/plugins/wakelock_plus/ios"
+
+SPEC CHECKSUMS:
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  flutter_custom_dialog: c0d222a3c35af5b57581e54ef8784c94037cd2ec
+  integration_test: 13825b8a9334a850581300559b8839134b124670
+  lecle_flutter_absolute_path: 7fd934b5b082a9d6547d79f365ae3705821091fe
+  package_info_plus: 115f4ad11e0698c8c1c5d8a689390df880f47e85
+  permission_handler_apple: e76247795d700c14ea09e3a2d8855d41ee80a2e6
+  select_media: 86aa3f089d81912e205ba2e40e2efc90ac07fca5
+  TZImagePickerController: e9909edbadf7381140efc5b5c9f5bdbfd630f7d4
+  video_player_avfoundation: 02011213dab73ae3687df27ce441fbbcc82b5579
+  wakelock_plus: 8b09852c8876491e4b6d179e17dfe2a0b5f60d47
+
+PODFILE CHECKSUM: ec8421380efc61d02dca45ba660ba701b3dcc435
+
+COCOAPODS: 1.12.1
