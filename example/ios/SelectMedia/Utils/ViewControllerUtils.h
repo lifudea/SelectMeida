@@ -9,9 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ViewControllerUtils : UIViewController
+@interface ViewControllerUtils : NSObject
 
-
+- (UIViewController *)getCurrentVc;
 
 @end
 

@@ -12,7 +12,7 @@ class MethodChannelSelectMedia extends SelectMediaPlatform {
   @visibleForTesting
   final methodChannel = const MethodChannel('select_media');
   /// 文件选择完成回调函数名称
-  final String fileCallbackName = "_selectMediaCallbackName";
+  static const String fileCallbackName = "_selectMediaCallbackName";
   /// 文件选择完成回调订阅列表
   final List<SelectMediaResponseSubscriber> subscriberList = [];
 
@@ -53,8 +53,9 @@ class MethodChannelSelectMedia extends SelectMediaPlatform {
 
   @override
   Future methodCallHandler(MethodCall methodCall) async {
+    debugPrint("收到回调了==== ");
     switch(methodCall.method) {
-      case "_selectMediaCallbackName":
+      case fileCallbackName:
         for (var element in subscriberList) {
           SelectMediaResponse mediaResponse = await SelectMediaResponse.createSync(methodCall.arguments);
           element(mediaResponse);

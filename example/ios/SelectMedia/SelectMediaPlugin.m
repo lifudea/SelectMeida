@@ -12,13 +12,14 @@
 
 @implementation SelectMediaPlugin
 
+FlutterMethodChannel *methodChannel;
 
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
-  FlutterMethodChannel* channel = [FlutterMethodChannel
+    methodChannel = [FlutterMethodChannel
       methodChannelWithName:@"select_media"
             binaryMessenger:[registrar messenger]];
   SelectMediaPlugin* instance = [[SelectMediaPlugin alloc] init];
-  [registrar addMethodCallDelegate:instance channel:channel];
+  [registrar addMethodCallDelegate:instance channel:methodChannel];
 }
 
 - (void)handleMethodCall:(FlutterMethodCall*)call result:(FlutterResult)result {
@@ -35,6 +36,7 @@
       NSLog(@"文件类型 %@", maxLength);
       NSLog(@"最大选择数量 %@", maxLength);
       NSLog(@"最大视频时长 %@", maxLength);
+      [[SelectMedia alloc] selectMedia:methodChannel withMediaType:mediaType withLength:maxLength withSecond:maxSecond];
       result([CallbackMap success]);
   } else {
       result(FlutterMethodNotImplemented);

@@ -7,10 +7,17 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
 
-@interface FileUtils : UIViewController
+
+@interface FileUtils : NSObject
+
+/**
+    获取文件地址
+     @type: 文件类型 0: 图片
+                 1: 视频
+ */
+//-(NSURL *)getFileURL: (UIImage *)image
+//    withType:(NSNumber *)type;
 
 @end
 
-NS_ASSUME_NONNULL_END

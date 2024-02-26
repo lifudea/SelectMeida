@@ -81,16 +81,6 @@ class _HomeState extends State<Home> {
                     child: const Text("仅视频")
                 ),
                 TextButton(
-                    onPressed: () {
-                      pauseVideo();
-                      selectMedia.selectMedia(
-                        context: context,
-                        selectMediaType: SelectMediaType.onlyAudio
-                      );
-                    },
-                    child: const Text("录制音频")
-                ),
-                TextButton(
                     onPressed: () async {
                       pauseVideo();
                       Map? map = await selectMedia.selectMedia(
@@ -110,16 +100,6 @@ class _HomeState extends State<Home> {
                       );
                     },
                     child: const Text("选择视频")
-                ),
-                TextButton(
-                    onPressed: () {
-                      pauseVideo();
-                      selectMedia.selectMedia(
-                        context: context,
-                        selectMediaType: SelectMediaType.audio
-                      );
-                    },
-                    child: const Text("选择多媒体")
                 ),
                 TextButton(
                     onPressed: () {

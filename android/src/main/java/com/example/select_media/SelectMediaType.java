@@ -8,20 +8,15 @@ public class SelectMediaType {
   /// 图片
   public static final int TYPE_IMAGE = 1;
 
-  /// 视频
-  public static final int TYPE_VIDEO = 2;
-
-  /// 音频
-  public static final int TYPE_AUDIO = 3;
-
   /// 仅使用照相机拍照
-  public static final int ONLY_IMAGE = 4;
+  public static final int ONLY_IMAGE = 2;
+
+  /// 视频
+  public static final int TYPE_VIDEO = 3;
 
   /// 仅使用照相机拍视频
-  public static final int ONLY_VIDEO = 5;
+  public static final int ONLY_VIDEO = 4;
 
-  /// 仅录制音频
-  public static final int ONLY_AUDIO = 6;
 
   /**
    * 根据下标获取选择文件的类型
@@ -35,15 +30,11 @@ public class SelectMediaType {
       case 1:
         return TYPE_IMAGE;
       case 2:
-        return TYPE_VIDEO;
-      case 3:
-        return TYPE_AUDIO;
-      case 4:
         return ONLY_IMAGE;
-      case 5:
+      case 3:
+        return TYPE_VIDEO;
+      case 4:
         return ONLY_VIDEO;
-      case 6:
-        return ONLY_AUDIO;
     }
     return 0;
   }

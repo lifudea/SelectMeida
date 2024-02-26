@@ -25,7 +25,7 @@ public class SelectMedia {
         int maxLength,
         int maxSecond
     ) {
-        if(selectMediaType >= 4) {
+        if(selectMediaType == 2 || selectMediaType == 4) {
             onlyCamera(
                 activity,
                 selectMediaType,
@@ -43,7 +43,7 @@ public class SelectMedia {
     }
 
     /**
-     * 仅拍摄照相、视频和录制音频、不从文件夹进行选择
+     * 仅拍摄照相、视频不从文件夹进行选择
      */
     private void onlyCamera(
         Activity activity,
